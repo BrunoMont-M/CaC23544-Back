@@ -13,8 +13,8 @@ public class Oradores {
 	
 	// Constructores
 	// Polimorfismo: la capacidad que tienen las clases de relacionar de maneras diferentes el mismo mensaje
-	public Oradores(Long id, String nombre, String apellido, String email, String tema, LocalDate fechaAlta) {
-		this.id_orador = id;
+	public Oradores(Long id_orador, String nombre, String apellido, String email, String tema, LocalDate fechaAlta) {
+		this.id_orador = id_orador;
 		init(nombre, apellido, email, tema, fechaAlta);
 	}
 	

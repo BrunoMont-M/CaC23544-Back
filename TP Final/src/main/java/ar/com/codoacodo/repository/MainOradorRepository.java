@@ -1,6 +1,6 @@
 package ar.com.codoacodo.repository;
 
-import java.time.LocalDate;
+//import java.time.LocalDate;
 import java.util.List;
 
 import ar.com.codoacodo.entities.Oradores;
@@ -12,7 +12,7 @@ public class MainOradorRepository {
 //		Interface i = new ClaseQueImplementa();
 		OradorRepository repository = new MySqlOradorRepository();
 		
-		repository.save(new Oradores(null, "Juan", "Perez", "jperez@example.com", "NodeJs", LocalDate.now()));
+//		repository.save(new Oradores(null, "Juan", "Perez", "jperez@example.com", "NodeJs", LocalDate.now()));
 		
 		List<Oradores> listado = repository.findAll();
 		

@@ -12,22 +12,23 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/api/orador/nuevo")
+@WebServlet("/api/oradores/nuevo")
 public class NuevoOradorController extends HttpServlet {
 
 //	Crear, usamos POST
 	@Override
 	protected void doPost(
-			HttpServletRequest reqest, // Lo que manda el user
+			HttpServletRequest request, // Lo que manda el user
 			HttpServletResponse response //Lo que responde el servidor
 			) throws ServletException, IOException {
 		
 		
 //		Capturo los parámetros enviados por el front
-		String nombre = reqest.getParameter("nombre");
-		String apellido = reqest.getParameter("apellido");
-		String email = reqest.getParameter("email");
-		String tema = reqest.getParameter("tema");
+		String nombre = request.getParameter("nombre");
+		String apellido = request.getParameter("apellido");
+		String email = request.getParameter("email");
+		String tema = request.getParameter("tema");
+		
 //		Creo mi orador con esos parametros
 		Oradores nuevo = new Oradores(null, nombre, apellido, email, tema, LocalDate.now());
 		
